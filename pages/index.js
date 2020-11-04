@@ -4,7 +4,7 @@ const index = () => {
 
 return(
 <Layout activeLink={'/'}>
-<H1> Hi! </H1>
+<h1> Hi! </h1>
 </Layout>
 )
 }
