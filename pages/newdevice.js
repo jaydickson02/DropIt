@@ -12,7 +12,7 @@ return(
 <Form action='https://drop-it-db.vercel.app/api/add' method='post'>
   <Form.Group controlId="formDeviceType">
     <Form.Label>Device Type</Form.Label>
-    <Form.Control as="select">
+    <Form.Control name='type' as="select">
       <option>Chromebook</option>
       <option>iPad</option>
       <option>Laptop</option>
@@ -23,17 +23,17 @@ return(
 
   <Form.Group controlId="formDeviceSerialNumber">
     <Form.Label>Serial Number</Form.Label>
-    <Form.Control type="text" placeholder="Serial Number" />
+    <Form.Control name='serialNumber' type="text" placeholder="Serial Number" />
   </Form.Group>
 
   <Form.Group controlId="formCurrentDeviceUser">
     <Form.Label>Current User</Form.Label>
-    <Form.Control type="text" placeholder="Ex. Jane Doe" />
+    <Form.Control name='currentUser' type="text" placeholder="Ex. Jane Doe" />
   </Form.Group>
 
   <Form.Group controlId="formDeviceCondition">
     <Form.Label>Condition</Form.Label>
-    <Form.Control as="select">
+    <Form.Control name='deviceCondition' as="select">
       <option>Working</option>
       <option>Repairing</option>
       <option>Broken</option>
