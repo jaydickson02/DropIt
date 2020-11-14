@@ -4,6 +4,24 @@ import Table from 'react-bootstrap/Table'
 
 const display = (props) => {
     console.log(props)
+
+    if (!props.device.type){
+        props.device.type = 'Undefined';
+    }
+    if (!props.device.serialNumber){
+        props.device.serialNumber = 'Undefined';
+    }
+    if (!props.device.condition){
+        props.device.condition = 'Undefined';
+    }
+    if (!props.device.currentUser){
+        props.device.currentUser = 'None';
+    }
+    if (!props.device.students){
+        props.device.students = [{name: 'None', date: 'none', id: 'none'}];
+    }
+
+
     return(
         <Container>
             
