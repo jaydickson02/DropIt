@@ -5,7 +5,7 @@ const index = (props) => {
     console.log(props)
 return(
 <Layout activeLink={'/'}>
-    <DisplayData device={props.devices[0]}/>
+    {props.devices.map(device => <div><a href={device.serialNumber}>{device.serialNumber}</a></div>) }
 </Layout>
 )
 }
