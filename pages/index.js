@@ -11,7 +11,7 @@ return(
 }
 
 index.getInitialProps = async (ctx) => {
-    const res = await fetch('https://drop-it-db.vercel.app/api/devices.js')
+    const res = await fetch('https://drop-it-db.vercel.app/api/devices')
     const json = await res.json()
     return { devices: json.devices }
   }
