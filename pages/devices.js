@@ -1,10 +1,25 @@
 import Layout from '../shared/layout'
+import Card from 'react-bootstrap/Card'
+import { Container } from 'react-bootstrap'
 
 const devices = (props) => {
-    console.log(props)
+    
 return(
 <Layout activeLink={'/devices'}>
-    {props.devices.map(device => <div><a href={'/devices/' + device.serialNumber}>{device.serialNumber}</a></div>) }
+    <Container>
+        {props.devices.map(device => 
+        
+        <Card style={{ width: '100%' }}>
+        <Card.Body>
+            <Card.Title>{device.serialNumber}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{device.type} • {device.currentUser.name}</Card.Subtitle>
+            
+            <Card.Link href={'/devices/' + device.serialNumber}>View</Card.Link>
+            <Card.Link href="#">Edit</Card.Link>
+        </Card.Body>
+        </Card>) }
+        
+    </Container>
 </Layout>
 )
 }
