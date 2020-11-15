@@ -1,40 +1,57 @@
-import { Container } from 'react-bootstrap'
+import React, { Component } from 'react'
+import { Container, Button } from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
+import NewField from '../shared/newField'
 
 
-const display = (props) => {
-    console.log(props)
+export default class extends Component {
 
-    if (!props.device.type){
-        props.device.type = 'Undefined';
+    constructor(props){
+        super(props)
+        this.state = {fieldState: false};
     }
-    if (!props.device.serialNumber){
-        props.device.serialNumber = 'Undefined';
-    }
-    if (!props.device.condition){
-        props.device.condition = 'Undefined';
-    }
-    if (!props.device.currentUser){
-        props.device.currentUser = 'None';
-    }
-    if (!props.device.students){
-        props.device.students = [{name: 'None', date: 'none', id: 'none'}];
-    }
+    
+    render(){
 
+        let fieldToggle = () => {
+            if(this.state.fieldState){
+                this.setState({fieldState: false})
+            } else {
+                this.setState({fieldState: true}); 
+            }
+        }
+
+        //Values to default to if relevatn data is not stored in DB.
+
+        if (!this.props.device.type){
+            this.props.device.type = 'Undefined';
+        }
+        if (!this.props.device.serialNumber){
+            this.props.device.serialNumber = 'Undefined';
+        }
+        if (!this.props.device.condition){
+            this.props.device.condition = 'Undefined';
+        }
+        if (!this.props.device.currentUser){
+            this.props.device.currentUser = 'None';
+        }
+        if (!this.props.device.students){
+            this.props.device.students = [{name: 'None', date: 'none', id: 'none'}];
+        }
 
     return(
         <Container>
             
             <h2>
-                {props.device.type}: <em>{props.device.serialNumber}</em>
+                {this.props.device.type}: <em>{this.props.device.serialNumber}</em>
             </h2>
             <h5>
-                Status: <em style ={{color:'green'}}>{props.device.condition}</em>
+                Status: <em style ={{color:'green'}}>{this.props.device.condition}</em>
             </h5>
         
             <hr />
 
-                <h3>Deployed to: {props.device.currentUser.name}</h3>
+                <h3>Deployed to: {this.props.device.currentUser.name}</h3>
 
                 <h3>User History</h3>
                 <Table striped bordered hover size="sm">
@@ -46,7 +63,7 @@ const display = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {props.device.students.map(student => 
+                        {this.props.device.students.map(student => 
                         
                         <tr>
                             <td>{student.name}</td>
@@ -56,42 +73,17 @@ const display = (props) => {
                         
                         )}
                     </tbody>
-                </Table>
-            
 
-            <Table striped bordered hover size="sm">
-                <thead>
-                    <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <td>3</td>
-                    <td colSpan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </Table>
+                </Table>
+                
+                <NewField data={{show: this.state.fieldState, idSerialNumber: this.props.device.serialNumber}}/>
+
+                <Button onClick={fieldToggle}>
+                    New Student
+                </Button>
 
         </Container>
     )
-
+}
 }
 
-export default display;
