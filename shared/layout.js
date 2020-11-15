@@ -22,7 +22,7 @@ let layout = (props) => {
     return(
         <div>
             <Head />
-            <Container>
+            <Container style={{minHeight: '92vh'}}>
             <Navbar activeLink={props.activeLink}/>
             {props.children}
             </Container>
