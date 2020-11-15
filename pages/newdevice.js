@@ -1,14 +1,17 @@
+import { useRouter } from 'next/router'
 import Layout from '../shared/layout'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Container } from 'react-bootstrap'
 
 const index = () => {
-
+const router = useRouter()
 
 return(
 <Layout activeLink={'/'}>
 <Container>
+<Button onClick={() => {router.back()}}>Back</Button>
+<hr />
 <Form action='https://drop-it-db.vercel.app/api/add' method='post'>
   <Form.Group controlId="formDeviceType">
     <Form.Label>Device Type</Form.Label>

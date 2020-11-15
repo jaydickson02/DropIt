@@ -10,7 +10,8 @@ const router = useRouter();
 return(
 <Layout activeLink={'/devices'}>
     <Container>
-        <Button onClick={() => {router.back()}}>Back</Button>
+        <Button style={{marginRight: '10px'}} onClick={() => {router.back()}}>Back</Button>
+        <Button href='/newdevice'>New Device</Button>
         <hr />
     
         {props.devices.map(device => 
