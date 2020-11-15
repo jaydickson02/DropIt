@@ -14,9 +14,13 @@ let navbar = (props) => {
         <Navbar.Brand href="/">DropIt</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Nav className="mr-auto"  activeKey={props.activeLink}>
+            <Nav.Link href="/devices">Devices</Nav.Link>
+            <Nav.Link href="/users">Users</Nav.Link>
+        </Nav>
           <Nav className="justify-content-end"  activeKey={props.activeLink}>
-            <Nav.Link href="/articles/all">Settings</Nav.Link>
-            <Nav.Link href="#link">Login</Nav.Link>
+            <Nav.Link href="/settings">Settings</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
