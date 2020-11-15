@@ -1,11 +1,10 @@
 import Layout from '../shared/layout'
-import DisplayData from '../shared/displayData'
 
 const devices = (props) => {
     console.log(props)
 return(
 <Layout activeLink={'/devices'}>
-    {props.devices.map(device => <div><a href={device.serialNumber}>{device.serialNumber}</a></div>) }
+    {props.devices.map(device => <div><a href={'/devices/' + device.serialNumber}>{device.serialNumber}</a></div>) }
 </Layout>
 )
 }

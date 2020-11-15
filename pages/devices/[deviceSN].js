@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import Layout from '../shared/layout'
-import DisplayData from '../shared/displayData'
+import Layout from '../../shared/layout'
+import DisplayData from '../../shared/displayData'
 
 const index = (props) => {
     
