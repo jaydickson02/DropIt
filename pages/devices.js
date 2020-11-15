@@ -1,12 +1,18 @@
+import { useRouter } from 'next/router'
 import Layout from '../shared/layout'
 import Card from 'react-bootstrap/Card'
-import { Container } from 'react-bootstrap'
+import { Button, Container } from 'react-bootstrap'
 
 const devices = (props) => {
-    
+
+const router = useRouter();
+
 return(
 <Layout activeLink={'/devices'}>
     <Container>
+        <Button onClick={() => {router.back()}}>Back</Button>
+        <hr />
+    
         {props.devices.map(device => 
         
         <Card style={{ width: '100%' }}>
@@ -18,7 +24,7 @@ return(
             <Card.Link href="#">Edit</Card.Link>
         </Card.Body>
         </Card>) }
-        
+
     </Container>
 </Layout>
 )

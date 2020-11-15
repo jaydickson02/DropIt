@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import Layout from '../../shared/layout'
 import DisplayData from '../../shared/displayData'
+import Button from 'react-bootstrap/Button'
+import { Container } from 'react-bootstrap'
 
 const index = (props) => {
     
@@ -22,6 +24,10 @@ if(!device){
 
 return(
 <Layout activeLink={'/'}>
+    <Container>
+        <Button onClick={() => {router.back()}}>Back</Button>
+        <hr />
+    </Container>
     <DisplayData device={device}/>
 </Layout>
 )
