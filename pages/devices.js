@@ -37,4 +37,4 @@ devices.getInitialProps = async (ctx) => {
     return { devices: json }
   }
 
-export default devices
+export default devices;

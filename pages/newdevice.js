@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Container } from 'react-bootstrap'
 
-const index = () => {
+const newDevice = () => {
 const router = useRouter()
 
 return(
@@ -12,7 +12,7 @@ return(
 <Container>
 <Button onClick={() => {router.back()}}>Back</Button>
 <hr />
-<Form action='https://drop-it-db.vercel.app/api/add' method='post'>
+<Form action='https://drop-it-db.vercel.app/api/adddevice' method='post'>
   <Form.Group controlId="formDeviceType">
     <Form.Label>Device Type</Form.Label>
     <Form.Control name='type' as="select">
@@ -52,4 +52,4 @@ return(
 )
 }
 
-export default index
+export default newDevice;
