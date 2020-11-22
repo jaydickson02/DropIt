@@ -21,7 +21,7 @@ export default class extends Component {
             }
         }
 
-        //Values to default to if relevatn data is not stored in DB.
+        //Values to default to if relevant data is not stored in DB.
 
         if (!this.props.device.type){
             this.props.device.type = 'Undefined';

@@ -1,7 +1,12 @@
 import { Container, Button, Card } from 'react-bootstrap'
 import Layout from '../shared/layout'
+import { useRouter } from 'next/router'
+import Search from '../shared/searchUsers'
 
 let users = (props) => {
+
+    const router = useRouter();
+
     return(
         <Layout activeLink={'/users'}>
             <Container>
@@ -9,17 +14,7 @@ let users = (props) => {
                 <Button href='/newuser'>Add User</Button>
                 <hr />
                 
-                {props.users.map(user => 
-        
-                    <Card style={{ width: '100%' }}>
-                    <Card.Body>
-                        <Card.Title>{user.name}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">{user.id} • {user.date}</Card.Subtitle>
-                        
-                        <Card.Link href={'/devices/' + user.id}>View</Card.Link>
-                        <Card.Link href="#">Edit</Card.Link>
-                    </Card.Body>
-                    </Card>) }
+                <Search users = {props.users}/>
             </Container>
         </Layout>
     )
