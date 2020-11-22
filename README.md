@@ -1,30 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The DropIt ReadMe
 
-## Getting Started
+## Outline
 
-First, run the development server:
+This project facilitates the needs of IT Departments regarding the management of hardware.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+#### Our main goals
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- A clean and minimal design
+- Allowance for the simple management of Users regarding device usage and lending.
+- As system capable of tracking repairs and/or notes related to device damage and usage.
+- Capability for the organization of inventory including tracking device locations and groupings.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Roadmap
 
-## Learn More
+No formal roadmap has been finalized currently we are just working to implement the initial feature set so that we have something to build on down the line.
 
-To learn more about Next.js, take a look at the following resources:
+## Licensing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+How this project will be licensed has not been finalized yet. Currently all rights are retained under copyright law. This project may become open source in the future should that be the path we choose to go down.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Developer
 
-## Deploy on Vercel
+#### Jay Dickson
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I'm an independent developer working to bring this project to life. Hopefully with enough time and effort the project will come to fruition. 
