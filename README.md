@@ -6,7 +6,7 @@ This project facilitates the needs of IT Departments regarding the management of
 
 #### Our main goals
 
-- A clean and minimal design
+- A clean and minimal design.
 - Allowance for the simple management of Users regarding device usage and lending.
 - As system capable of tracking repairs and/or notes related to device damage and usage.
 - Capability for the organization of inventory including tracking device locations and groupings.
