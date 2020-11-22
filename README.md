@@ -1,4 +1,4 @@
-# The DropIt ReadMe
+#DropIt
 
 ## Outline
 
