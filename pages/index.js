@@ -18,7 +18,7 @@ return(
         <Jumbotron>
             <h1>DropIt</h1>
             <p>
-                We're working to build a clean, minimal and highly functional system thats capable of managing all the needs of an IT Department with respect to hardware. Soloutions are available for inventory organisation, tracking repairs and managing users.
+                We're working to build a clean, minimal and highly functional system that's capable of managing all the needs of an IT Department with respect to hardware. Soloutions are available for inventory organisation, tracking repairs and managing users.
             </p>
 
             <p>
