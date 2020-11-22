@@ -26,7 +26,7 @@ let users = (props) => {
 }
 
 users.getInitialProps = async (ctx) => {
-    const res = await fetch('https://drop-it-db.vercel.app/api/devices')
+    const res = await fetch('https://drop-it-db.vercel.app/api/users')
     const json = await res.json()
     return { users: json }
   }
