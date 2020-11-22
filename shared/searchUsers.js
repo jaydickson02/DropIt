@@ -52,8 +52,8 @@ export default class extends Component {
             <div>
                 <Nav style={{paddingBottom: '15px'}}>
                     <Nav.Item>
-                    <Form inline style={{width: '200%'}}>
-                        <Form.Control style={{width: '100%'}} type="text" placeholder="Search" className="mr-sm-2" onChange={updateSearch}/>
+                    <Form inline>
+                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" onChange={updateSearch}/>
                     </Form>
                     </Nav.Item>
                 </Nav>
