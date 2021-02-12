@@ -33,7 +33,7 @@ return(
 )
 }
 
-index.getInitialProps = async (ctx) => {
+user.getInitialProps = async (ctx) => {
     const res = await fetch('https://drop-it-db.vercel.app/api/users')
     const json = await res.json()
     return { users: json }
