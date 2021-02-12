@@ -20,15 +20,6 @@ export default class extends Component {
             let filteredUsers = [];
 
             if(event.target.value){
-                /* Version that allows for a filter props
-
-                for(let i = 0; i < this.state.filters.length; i++){
-                    let result = this.state.devices.filter(device => {return device[this.state.filters[i]].toLowerCase().includes(event.target.value.toLowerCase())});
-                    
-
-                    filteredDevices = filteredDevices.concat(result);
-                }
-                */
                 
                 let byName = this.state.users.filter(user => {return user.name.toLowerCase().includes(event.target.value.toLowerCase())})
 
@@ -65,7 +56,7 @@ export default class extends Component {
                         <Card.Title>{user.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{user.id} • {user.date}</Card.Subtitle>
                         
-                        <Card.Link href={'/devices/' + user.id}>View</Card.Link>
+                        <Card.Link href={'/users/' + user.id}>View</Card.Link>
                         <Card.Link href="#">Edit</Card.Link>
                     </Card.Body>
                     </Card>) }

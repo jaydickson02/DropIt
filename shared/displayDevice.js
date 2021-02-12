@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Button } from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
-import NewField from '../shared/newField'
+import NewField from './newField'
 
 
 export default class extends Component {

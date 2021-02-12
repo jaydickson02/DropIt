@@ -1,23 +1,23 @@
 import { useRouter } from 'next/router'
 import Layout from '../../shared/layout'
-import DisplayData from '../../shared/displayDevice'
+import DisplayData from '../../shared/displayUser'
 import Button from 'react-bootstrap/Button'
 import { Container } from 'react-bootstrap'
 
-const device = (props) => {
+const user = (props) => {
     
 const router = useRouter();
-const { deviceSN } = router.query;
+const { userID } = router.query;
 
-let device;
+let user;
 
-for(let i = 0; i < props.devices.length; i++){
-    if(props.devices[i].serialNumber == deviceSN){
-        device = props.devices[i];
+for(let i = 0; i < props.users.length; i++){
+    if(props.users[i].id == userId){
+        user = props.users[i];
     }
 }
 
-if(!device){
+if(!user){
     //Change to error page later
     return(<h1>Error Not Found</h1>)
 }
@@ -28,15 +28,15 @@ return(
         <Button onClick={() => {router.back()}}>Back</Button>
         <hr />
     </Container>
-    <DisplayData device={device}/>
+    <DisplayData user={user}/>
 </Layout>
 )
 }
 
 index.getInitialProps = async (ctx) => {
-    const res = await fetch('https://drop-it-db.vercel.app/api/devices')
+    const res = await fetch('https://drop-it-db.vercel.app/api/users')
     const json = await res.json()
-    return { devices: json }
+    return { users: json }
   }
 
-export default device
+export default user
