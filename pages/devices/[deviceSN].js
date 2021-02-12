@@ -30,7 +30,7 @@ return(
         <Button onClick={() => {router.back()}}>Back</Button>
         <hr />
     </Container>
-    <DisplayData device={device}/>
+    <DisplayData data={{'device': device, 'users': props.response.users}}/>
 </Layout>
 )
 }
