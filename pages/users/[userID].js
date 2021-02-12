@@ -12,7 +12,7 @@ const { userID } = router.query;
 let user;
 
 for(let i = 0; i < props.users.length; i++){
-    if(props.users[i].id == userId){
+    if(props.users[i].id == userID){
         user = props.users[i];
     }
 }
