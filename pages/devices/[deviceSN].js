@@ -11,10 +11,12 @@ const { deviceSN } = router.query;
 
 let device;
 
-for(let i = 0; i < props.devices.length; i++){
-    if(props.devices[i].serialNumber == deviceSN){
-        device = props.devices[i];
+for(let i = 0; i < props.response.devices.length; i++){
+    for(let i = 0; i < props.response.devices.length; i++){
+    if(props.response.devices[i].serialNumber == deviceSN){
+        device = props.response.devices[i];
     }
+}
 }
 
 if(!device){
@@ -32,11 +34,20 @@ return(
 </Layout>
 )
 }
+    
 
 device.getInitialProps = async (ctx) => {
-    const res = await fetch('https://drop-it-db.vercel.app/api/devices')
-    const json = await res.json()
-    return { devices: json }
+    
+
+    const resDevices = await fetch('https://drop-it-db.vercel.app/api/devices')
+    const devJson = await resDevices.json()
+
+    const resUsers = await fetch('https://drop-it-db.vercel.app/api/users')
+    const userJson = await resUsers.json()
+
+    let json = {'devices' : devJson, 'users' : userJson};
+    
+    return { response: json }
   }
 
 export default device
