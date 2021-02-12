@@ -81,24 +81,6 @@ export default class extends Component {
                             </Button>
                         </Card.Body>
                         </Card>
-                    
-                        /*
-                    <Form action='https://drop-it-db.vercel.app/api/update' method='post'>
-                    <Form.Group controlId="newStudentInput">
-                        <Form.Control name='student' type='hidden' value={user.name}></Form.Control>
-                    </Form.Group>
-
-                    <Form.Group controlId="studentID">
-                        <Form.Control name='id' type='hidden' value={user.id}></Form.Control>
-                    </Form.Group>
-
-                    <Form.Group controlId="idSerialNumber">
-                        <Form.Control name='idSerialNumber' type='hidden' value={this.state.deviceID}></Form.Control>
-                    </Form.Group>
-
-                </Form> */
-
-
 
                 ) }
             </div>

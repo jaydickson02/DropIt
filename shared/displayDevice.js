@@ -78,7 +78,7 @@ export default class extends Component {
                 
                 <NewField data={{show: this.state.fieldState, idSerialNumber: this.props.data.device.serialNumber, users: this.props.data.users}}/>
 
-                <Button onClick={fieldToggle}>
+                <Button style={{marginTop:'5px'}} onClick={fieldToggle}>
                     Assign Student
                 </Button>
 

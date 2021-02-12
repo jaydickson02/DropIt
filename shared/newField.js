@@ -17,27 +17,6 @@ export default class extends Component {
             return(
             <div>
                 <Search data = {{users: this.props.data.users, deviceID: this.props.data.idSerialNumber}}/>
-
-                <Form action='https://drop-it-db.vercel.app/api/update' method='post'>
-                    <Row>
-                        <Col>
-                            <Form.Group controlId="newStudentInput">
-                                <Form.Control name='student' type='text'></Form.Control>
-                            </Form.Group>
-                        </Col>
-
-                        <Col> 
-                            <Button variant="primary" type="submit">
-                                Add
-                            </Button>
-                        </Col>
-                    </Row>
-
-                    <Form.Group controlId="idSerialNumber">
-                        <Form.Control name='idSerialNumber' type='hidden' value={this.props.data.idSerialNumber}></Form.Control>
-                    </Form.Group>
-
-                </Form>
             </div>
             );
         } else {
