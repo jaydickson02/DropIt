@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import Search from './searchSelectUser'
 
 export default class extends Component {
     constructor(props){
@@ -14,26 +15,30 @@ export default class extends Component {
 
         if(this.props.data.show){
             return(
-            <Form action='https://drop-it-db.vercel.app/api/update' method='post'>
-                <Row>
-                    <Col>
-                        <Form.Group controlId="newStudentInput">
-                            <Form.Control name='student' type='text'></Form.Control>
-                        </Form.Group>
-                    </Col>
+            <div>
+                <Search data = {{users: this.props.data.users, deviceID: this.props.data.idSerialNumber}}/>
 
-                    <Col> 
-                        <Button variant="primary" type="submit">
-                            Add
-                        </Button>
-                    </Col>
-                </Row>
+                <Form action='https://drop-it-db.vercel.app/api/update' method='post'>
+                    <Row>
+                        <Col>
+                            <Form.Group controlId="newStudentInput">
+                                <Form.Control name='student' type='text'></Form.Control>
+                            </Form.Group>
+                        </Col>
 
-                <Form.Group controlId="idSerialNumber">
-                    <Form.Control name='idSerialNumber' type='hidden' value={this.props.data.idSerialNumber}></Form.Control>
-                </Form.Group>
+                        <Col> 
+                            <Button variant="primary" type="submit">
+                                Add
+                            </Button>
+                        </Col>
+                    </Row>
 
-            </Form>
+                    <Form.Group controlId="idSerialNumber">
+                        <Form.Control name='idSerialNumber' type='hidden' value={this.props.data.idSerialNumber}></Form.Control>
+                    </Form.Group>
+
+                </Form>
+            </div>
             );
         } else {
             return (<div></div>);
