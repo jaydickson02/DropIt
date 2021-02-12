@@ -46,7 +46,7 @@ export default class extends Component {
         
             <hr />
 
-                <h3>Deployed to: {this.user.device}</h3>
+                <h3>Deployed to: {this.props.user.device}</h3>
 
         </Container>
     )
